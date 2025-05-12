@@ -1,4 +1,8 @@
-import { readFileAsynchronously, doStuffByTimeout, doStuffByInterval } from './index';
+import {
+  readFileAsynchronously,
+  doStuffByTimeout,
+  doStuffByInterval,
+} from './index';
 import { join } from 'path';
 import * as fs from 'fs';
 import * as fsPromises from 'fs/promises';

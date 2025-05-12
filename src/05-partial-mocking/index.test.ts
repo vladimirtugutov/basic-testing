@@ -9,12 +9,7 @@ jest.mock('./index', () => {
   };
 });
 
-import {
-  mockOne,
-  mockTwo,
-  mockThree,
-  unmockedFunction,
-} from './index';
+import { mockOne, mockTwo, mockThree, unmockedFunction } from './index';
 
 describe('partial mocking', () => {
   afterAll(() => {

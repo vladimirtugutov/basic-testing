@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { throttledGetDataFromApi } from './index';
 
 jest.mock('lodash', () => ({
-  throttle: (fn: any) => fn,
+  throttle: (fn: (...args: unknown[]) => unknown) => fn,
 }));
 
 jest.mock('axios');

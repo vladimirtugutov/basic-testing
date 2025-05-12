@@ -14,12 +14,14 @@ describe('simpleCalculator - table tests', () => {
     ({ a, b, action, expected }) => {
       const result = simpleCalculator({ a, b, action });
       expect(result).toBe(expected);
-    }
+    },
   );
 
   test('should return null for invalid input', () => {
     expect(simpleCalculator({ a: '5', b: 2, action: Action.Add })).toBeNull();
-    expect(simpleCalculator({ a: 5, b: null, action: Action.Multiply })).toBeNull();
+    expect(
+      simpleCalculator({ a: 5, b: null, action: Action.Multiply }),
+    ).toBeNull();
     expect(simpleCalculator({ a: 5, b: 2, action: '%' })).toBeNull();
   });
 });
