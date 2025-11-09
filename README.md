@@ -1,3 +1,6 @@
+# Important note for the reviewers
+This task was completed by me for the first time in May 2025. I used another GitHub profile (marmotT) for pushing the code to the repository, but the repository remains mine. Please don't waste your time trying to accuse me of stealing another person's code because marmotT and vladimirtugutov are the same person—me—and I can easily prove that. Thank you for your attention.
+
 # Basic testing
 
 ## General task description
