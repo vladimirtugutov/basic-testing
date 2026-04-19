@@ -35,4 +35,22 @@ describe('partial mocking', () => {
     expect(consoleSpy).toHaveBeenCalledWith('I am not mocked');
     consoleSpy.mockRestore();
   });
+
+  test('mockOne should be called once', () => {
+    mockOne();
+
+    expect(mockOne).toHaveBeenCalledTimes(1);
+  });
+
+  test('mockTwo and mockThree should be called with no arguments', () => {
+    mockTwo();
+    mockThree();
+
+    expect(mockTwo).toHaveBeenCalledWith();
+    expect(mockThree).toHaveBeenCalledWith();
+  });
+
+  test('unmockedFunction should not be a mocked function', () => {
+    expect(jest.isMockFunction(unmockedFunction)).toBe(false);
+  });
 });
