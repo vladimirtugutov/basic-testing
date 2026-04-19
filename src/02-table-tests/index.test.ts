@@ -24,4 +24,26 @@ describe('simpleCalculator - table tests', () => {
     ).toBeNull();
     expect(simpleCalculator({ a: 5, b: 2, action: '%' })).toBeNull();
   });
+
+  test('should return Infinity when dividing by zero', () => {
+    const result = simpleCalculator({ a: 10, b: 0, action: Action.Divide });
+
+    expect(result).toBe(Infinity);
+  });
+
+  test('should return 1 when exponentiating any number to zero', () => {
+    const result = simpleCalculator({
+      a: 7,
+      b: 0,
+      action: Action.Exponentiate,
+    });
+
+    expect(result).toBe(1);
+  });
+
+  test('should correctly subtract negative numbers', () => {
+    const result = simpleCalculator({ a: -5, b: -3, action: Action.Subtract });
+
+    expect(result).toBe(-2);
+  });
 });
